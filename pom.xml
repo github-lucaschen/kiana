@@ -101,6 +101,7 @@
     </dependencyManagement>
 
     <modules>
+        <module>kiana-common</module>
     </modules>
     <packaging>pom</packaging>
 
