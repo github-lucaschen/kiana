@@ -25,6 +25,8 @@
         <jjwt.version>0.9.1</jjwt.version>
         <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <doc.version>4.4.0</doc.version>
+        <swagger-annotations.version>2.2.9</swagger-annotations.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -98,6 +100,17 @@
                 <scope>provided</scope>
             </dependency>
 
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <version>${doc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+
             <!-- 核心模块 -->
             <dependency>
                 <groupId>com.lucaschen</groupId>
@@ -109,6 +122,13 @@
             <dependency>
                 <groupId>com.lucaschen</groupId>
                 <artifactId>kiana-common-redis</artifactId>
+                <version>${kiana.version}</version>
+            </dependency>
+
+            <!-- 数据库服务 -->
+            <dependency>
+                <groupId>com.lucaschen</groupId>
+                <artifactId>kiana-common-jpa</artifactId>
                 <version>${kiana.version}</version>
             </dependency>
         </dependencies>

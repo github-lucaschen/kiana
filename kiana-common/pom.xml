@@ -12,6 +12,7 @@
     <modules>
         <module>kiana-common-core</module>
         <module>kiana-common-redis</module>
+        <module>kiana-common-jpa</module>
     </modules>
 
     <artifactId>kiana-common</artifactId>
