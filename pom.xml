@@ -97,6 +97,20 @@
                 <version>${mapstruct.version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.lucaschen</groupId>
+                <artifactId>kiana-common-core</artifactId>
+                <version>${kiana.version}</version>
+            </dependency>
+
+            <!-- 缓存服务 -->
+            <dependency>
+                <groupId>com.lucaschen</groupId>
+                <artifactId>kiana-common-redis</artifactId>
+                <version>${kiana.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

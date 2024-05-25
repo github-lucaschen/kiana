@@ -11,6 +11,7 @@
 
     <modules>
         <module>kiana-common-core</module>
+        <module>kiana-common-redis</module>
     </modules>
 
     <artifactId>kiana-common</artifactId>

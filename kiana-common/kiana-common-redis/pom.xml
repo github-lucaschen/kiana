@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lucaschen</groupId>
+        <artifactId>kiana-common</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>kiana-common-redis</artifactId>
+    <description>
+        Common Redis 缓存服务
+    </description>
+
+    <dependencies>
+        <!-- Common Core-->
+        <dependency>
+            <groupId>com.lucaschen</groupId>
+            <artifactId>kiana-common-core</artifactId>
+        </dependency>
+
+        <!-- SpringBoot Boot Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+    </dependencies>
+</project>
