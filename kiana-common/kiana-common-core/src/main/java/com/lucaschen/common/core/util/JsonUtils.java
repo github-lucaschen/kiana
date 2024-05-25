@@ -17,7 +17,6 @@ import com.lucaschen.common.core.exception.UtilExceptionCode;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
-import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -85,7 +84,7 @@ public final class JsonUtils {
         try {
             return object instanceof String ? (String) object : jsonMapper.writeValueAsString(object);
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::to({0})", object), e);
+            log.error("JsonUtils::to({})", object, e);
             throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
         }
     }
@@ -97,8 +96,7 @@ public final class JsonUtils {
         try {
             return jsonMapper.readValue(json, clazz);
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::to({0}, {1})",
-                    json, clazz), e);
+            log.error("JsonUtils::to({}, {})", json, clazz, e);
             throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
         }
     }
@@ -110,8 +108,7 @@ public final class JsonUtils {
         try {
             return jsonMapper.readValue(json, typeReference);
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::to({0}, {1})",
-                    json, typeReference), e);
+            log.error("JsonUtils::to({}, {})", json, typeReference, e);
             throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
         }
     }
@@ -124,7 +121,7 @@ public final class JsonUtils {
             jsonMapper.readTree(json);
             return true;
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::isJson({0})", json));
+            log.error("JsonUtils::isJson({})", json);
             return false;
         }
     }
@@ -141,7 +138,7 @@ public final class JsonUtils {
                 return jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(object);
             }
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::to({0})", object), e);
+            log.error("JsonUtils::to({})", object, e);
             throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
         }
     }
@@ -153,8 +150,7 @@ public final class JsonUtils {
         try {
             return jsonMapper.readTree(json).findValuesAsText(fieldName);
         } catch (JsonProcessingException e) {
-            log.error(MessageFormat.format("JsonUtils::findText({0}, {1})",
-                    json, fieldName), e);
+            log.error("JsonUtils::findText({}, {})", json, fieldName, e);
             throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
         }
     }
@@ -168,8 +164,7 @@ public final class JsonUtils {
             try {
                 return jsonMapper.readTree(json);
             } catch (JsonProcessingException e) {
-                log.error(MessageFormat.format("JsonUtils::toTree({0})",
-                        json), e);
+                log.error("JsonUtils::toTree({})", json, e);
                 throw new GlobalException(UtilExceptionCode.UTIL_JSON_001);
             }
         }
