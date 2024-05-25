@@ -1,0 +1,2 @@
+com.lucaschen.common.web.config.GlobalMvcAutoConfig
+com.lucaschen.common.web.config.GlobalWebConfig
